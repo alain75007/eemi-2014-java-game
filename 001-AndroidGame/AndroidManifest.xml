@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Ce fichier est lu et sauvegardé par le système Android lors de l'installation
+de l'application, elle décrit l'application, les activités possibles et les permissions
+demandées -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myschool.mygame" 
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <!--  package: le nom du paquet applicatif -->
+    <!--  android:versionCode: le numéro de version (int) -->
+    <!--  android:versionName: le nom de la version (String), telle que vue par
+     les utilisateurs -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="Init" >
+<!--    android:name="Init" : par défaut la classe Application est instanciée -->
+<!--    lors du lancement de l'application. Nous déclarons ici, qu'il faut  -->
+<!--    plutôt instancer la classe Init qui étend la classe Application. Cette classe -->
+<!--    que nous avons créée nous servira à stocker les variables et les méthodes -->
+<!--    auquelles nous voulons pouvoir accéder à partir de n'importe-qu'elle de  -->
+<!--    nos activités.  -->
+        <activity
+            android:name=".MainActivity" 
+            android:label="@string/app_name" > 
+            <!-- android:name Le nom de la classe -->
+            <!-- android:labelLe nom affiché -->
+            
+            <!--  un intent-permet permet d'indiquer au système
+            Android à quelle occasion il peut démarrer l'activité -->
+            <intent-filter>
+                <!--  Nous déclarons ici qu'il s'agit de l'activité principale:
+                de l'application -->
+                <action android:name="android.intent.action.MAIN" />
+
+				<!--  Nous déclarons ici que l'activité est lançable par l'utilisateur,
+				une icône sera dont créée pour se faire  -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!--  Telle que déclarée, l'activité GameActivity ne sera lançable ni par un 
+        utisateur, ni par le système Android (à la demande d'une autre application. 
+        Cette activité ne sera donc lançable que par l'application elle-même -->
+        <activity
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game" >
+        </activity>
+    </application>
+
+</manifest>
