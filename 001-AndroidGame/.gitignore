@@ -1,4 +1,3 @@
-# there is also .gitignore in each project except library with bin only (no src) 
 lt application files
 *.apk
 *.ap_
@@ -10,8 +9,8 @@ lt application files
 *.class
 
 # Generated files
-#bin/
-#gen/
+bin/
+gen/
 
 # Gradle files
 .gradle/
