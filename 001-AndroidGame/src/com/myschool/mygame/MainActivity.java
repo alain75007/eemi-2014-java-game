@@ -10,13 +10,21 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.myschool.mygame.javagame.core.Archer;
+import com.myschool.mygame.javagame.core.Mage;
+import com.myschool.mygame.javagame.core.Warrior;
+
 /**
  *  Notre classe MainActivity est fille de ActionBarActivity
  *  
  */
 public class MainActivity extends ActionBarActivity {
 
-	/** 
+    //private int charType;
+    private Warrior charClass;
+    private int charType;
+
+    /**
 	 * @Override indique au compilateur que la méthode onCreate remplace une 
 	 * méthode de la classe parente 
 	 * 
@@ -101,12 +109,16 @@ public class MainActivity extends ActionBarActivity {
 			 ((ImageView) charImage).setImageResource(R.drawable.ic_launcher);
         	//Toast.makeText(this, "Button 1 Click", Toast.LENGTH_SHORT).show();
 		    //((TextView) findViewById(R.id.act_main_view_btn_go)).setText("toto");
-
+            charType = 1;
+             //charClass = ((Warrior)Mage.class);
         	break;
 		case R.id.act_main_view_btn_2:
 			 ((ImageView) charImage).setImageResource(R.drawable.ic_archer);
 			 //Toast.makeText(this, "Button 1 Click", Toast.LENGTH_SHORT).show();
-			 break;
+            charType = 2;
+            //charClass = (Warrior) Archer.class;
+
+            break;
     	}
     }
     
@@ -131,11 +143,19 @@ public class MainActivity extends ActionBarActivity {
     	}
     	else {
     		/**
-    		 *  Non, on stocke le nom du personnage dans l'objet Init 
-    		 *  
+    		 *  Si Non, on crée un Guerrier (Warrior) selon le type de guerrier choisit par l'utilisateur
+             *
     		 */
     		Init init = (Init) this.getApplicationContext();
-    		init.charName =((EditText) charName).getText().toString();
+            if (charType == 1) {
+                init.warrior = new Mage(((EditText) charName).getText().toString());
+
+            }
+            else {
+                init.warrior = new Archer(((EditText) charName).getText().toString());
+            }
+
+    		//init.charName =((EditText) charName).getText().toString();
 
     		/**
     		 *  Puis on crée un objet Intent que l'on utilisera pour demander 

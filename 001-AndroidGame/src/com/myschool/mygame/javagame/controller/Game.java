@@ -1,13 +1,13 @@
 // Fichier Game.java
-package com.myschool.game.controller;
+package com.myschool.mygame.javagame.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.myschool.game.core.Archer;
-import com.myschool.game.core.Character;
-import com.myschool.game.core.Warrior;
+import com.myschool.mygame.javagame.core.Archer;
+import com.myschool.mygame.javagame.core.Character;
+import com.myschool.mygame.javagame.core.Warrior;
 
 public class Game {
 
@@ -48,32 +48,29 @@ public class Game {
 				}
 				else {
 					//System.out.println(cmd);
-					switch (cmd) {
-					case "h":  {
-						character3.disBonjour();
-					}
-					break;
-					case "gw":  {
-						character3.getWeapon();
-					}
-					break;
-					case "f":  {
-						character3.fight();
-					}
-					break;
-					case "exit": ;
-					break;
+                    if (cmd.equals("h")) {
+                        character3.disBonjour();
 
-					default: character3.dit("Commande " + cmd + " not found");
-					break;
-					}
+                    } else if (cmd.equals("gw")) {
+                        character3.getWeapon();
+
+                    } else if (cmd.equals("f")) {
+                        character3.fight();
+
+                    } else if (cmd.equals("exit")) {
+                        ;
+
+                    } else {
+                        character3.dit("Commande " + cmd + " not found");
+
+                    }
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 
 		}
-		System.out.println("Exit game");
+		System.out.println("Exit com.myschool.mygame.game");
 
 	}
 

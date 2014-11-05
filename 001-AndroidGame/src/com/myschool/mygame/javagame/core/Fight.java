@@ -1,4 +1,4 @@
-package com.myschool.game.core;
+package com.myschool.mygame.javagame.core;
 
 public interface Fight {
 	void getWeapon();

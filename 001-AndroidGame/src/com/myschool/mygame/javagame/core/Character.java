@@ -1,5 +1,5 @@
 //Fichier Character.java
-package com.myschool.game.core;
+package com.myschool.mygame.javagame.core;
 
 public class Character {
 	private static int playerCount;

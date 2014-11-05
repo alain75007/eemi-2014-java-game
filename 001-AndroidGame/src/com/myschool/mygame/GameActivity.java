@@ -19,13 +19,14 @@ public class GameActivity extends ActionBarActivity {
 		
 		/* Puis on affiche le nom du personnage */
 		View charNameView = findViewById(R.id.act_game_view_charName);
-		((TextView) charNameView).setText(init.charName);
+
+		((TextView) charNameView).setText(init.warrior.getName());
 		
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+		// Inflate the menu; this adds items to the action bar //if it is present.
 		getMenuInflater().inflate(R.menu.game, menu);
 		return true;
 	}

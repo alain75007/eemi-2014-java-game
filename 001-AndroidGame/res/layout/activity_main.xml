@@ -42,7 +42,9 @@
         android:layout_below="@+id/act_main_view_character_name"
         android:layout_marginTop="26dp"
         android:onClick="onBtnClick"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false" />
 
     <ImageView
         android:id="@+id/act_main_view_character_image"
@@ -51,7 +53,8 @@
         android:layout_alignRight="@+id/TextView1"
         android:layout_below="@+id/act_game_view_charName"
         android:layout_marginTop="42dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher"
+        android:adjustViewBounds="false" />
 
     <Button
         android:id="@+id/act_main_view_btn_go"

@@ -1,6 +1,9 @@
 package com.myschool.mygame;
 
 import android.app.Application;
+
+import com.myschool.mygame.javagame.core.Warrior;
+
 /*
  *  La classe Application est fournie par le SDK Android
  *
@@ -24,5 +27,6 @@ import android.app.Application;
  *
  */
 public class Init extends Application {
-String charName;
+//String charName;
+    Warrior warrior;
 }

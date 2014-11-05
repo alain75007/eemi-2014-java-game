@@ -1,10 +1,10 @@
-package com.myschool.game.core;
+package com.myschool.mygame.javagame.core;
 
-public class Archer extends Warrior  {
+public class Mage extends Warrior  {
 	protected int arrowCount = 2;
 	protected boolean weaponInUse = false;
 	protected boolean hasWeapon = true;
-	public Archer(String name) {
+	public Mage(String name) {
 		super(name);
 	}
 

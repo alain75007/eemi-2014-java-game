@@ -1,4 +1,4 @@
-package com.myschool.game.core;
+package com.myschool.mygame.javagame.core;
 
 public abstract class Warrior extends Character implements Fight {
 
